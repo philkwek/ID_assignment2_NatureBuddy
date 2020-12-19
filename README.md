@@ -10,6 +10,8 @@ The app will provide a suggestion by grabbing from a list of Parks, Nature Reser
 
 Under the summary, users will also see a small tree which will grow for every time that they go on a adventure, providing users with a sense of progress/achievement. The app will also award badges for more significant achievements such as "Taken 3 Adventures!" or "Walked a total of 10km".
 
+## Wireframes can be seen here -> [Click me!](https://xd.adobe.com/view/88c7ac2b-d3c7-4040-8cc6-20edea67d832-dd94/grid)
+
 ## Planned Features
 * Achievements (Get a Badge for X number of Adventures)
 * Grow a Tree! (Tree grows for every Adventure taken)
@@ -30,6 +32,8 @@ Under the summary, users will also see a small tree which will grow for every ti
 * Visual Studio Code
 * HTML, CSS and Javascript
 * Google Maps API, Routes API and Places API
+* BootStrap 4
+* Animate.css
 
 
 ## Development Log
@@ -37,6 +41,10 @@ Under the summary, users will also see a small tree which will grow for every ti
 ### 17/12/2020
 - Designed Wireframe for Nature Buddy 
 - Created Github repo
+
+### 19/12/2020
+- Started on Landing page text,design and animated elements
+- Updated Readme to include wireframe
 
 ## Credits
 
