@@ -46,6 +46,10 @@ Under the summary, users will also see a small tree which will grow for every ti
 - Started on Landing page text,design and animated elements
 - Updated Readme to include wireframe
 
+### 20/12/2020
+- Started on basic HTML and JS for the random_location page
+- added JSON list for all the possible nature adventure locations
+
 ## Credits
 
 ### Media
