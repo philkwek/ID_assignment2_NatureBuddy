@@ -50,6 +50,10 @@ Under the summary, users will also see a small tree which will grow for every ti
 - Started on basic HTML and JS for the random_location page
 - added JSON list for all the possible nature adventure locations
 
+### 21/12/202
+- Created JS functions to randomize locations and to store list of locations in localStorage
+- Created JS function to check for localStorage location data, adds fresh list if data does not exist
+
 ## Credits
 
 ### Media
