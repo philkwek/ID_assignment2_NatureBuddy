@@ -52,3 +52,17 @@
         top:80px;
     }
 }
+
+/*random location css section*/
+
+#map{
+    width:95%;
+    height:30rem;
+}
+
+#google_search{
+    font-size:0.8rem;
+}
+
+
+

@@ -1,6 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDJLG-WvPz1_a2W9EcQQDOQn4wL1NWyuo&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,20 +24,20 @@
               <h5 class="text-left">You're heading to...</h5>
             </div>
             <div class="col-sm-12">
-              <h1 class="text-left" id="name_of_location">Test</h1>
+              <h1 class="text-left" id="name_of_location"></h1>
             </div>
         </div>
     </div>
     
   </head>
   <body>
-      <div class = "container" align=center>
+        <div class = "container" align=center>
           <div class="row">
-              <div class="col-sm-12" >
-                <h1>/google maps api here/</google></h1>
+              <div class="col-sm-12 h-12" >
+                <div id="map"></div>
               </div>
-              <div class="col-sm-12">
-                <p id="google_search">(click here to see some pictures of the location!)</p>
+              <div class="col-sm-12 mt-3">
+                <p id="google_search">(click here to see some pictures of the location or use human icon to do a Street View!)</p>
               </div>
           </div>
       </div>
@@ -39,11 +45,12 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
     crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="random_location.js"></script>
   </body>
 </html>

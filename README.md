@@ -54,6 +54,9 @@ Under the summary, users will also see a small tree which will grow for every ti
 - Created JS functions to randomize locations and to store list of locations in localStorage
 - Created JS function to check for localStorage location data, adds fresh list if data does not exist
 
+- Coded JS Functions to random_locations.html to now show randomized locations
+- Encountered Major Bug (access to AJAX request blocked by CORS policy), preventing access to proper names for locations and images
+
 ## Credits
 
 ### Media
