@@ -106,3 +106,8 @@ function initMap() { // this functions runs the map api
     });
 }
 
+$('#confirm_location').click(function(){ //event listener for button
+    console.log("clicked!");
+    //window.location="ADD_HTML_OF_NEXT_PAGE"
+})
+

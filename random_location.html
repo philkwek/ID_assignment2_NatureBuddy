@@ -12,13 +12,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" 
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
     crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
-    <div class="container mt-5 m-3" align=center>
+    <div class="container mt-5 m-3 animate__animated animate__slideInDown" align=center>
         <div class="row align-items-center">
             <div class="col-sm-12">
               <h5 class="text-left">You're heading to...</h5>
@@ -31,13 +34,19 @@
     
   </head>
   <body>
-        <div class = "container" align=center>
+        <div class = "container " align=center>
           <div class="row">
-              <div class="col-sm-12 h-12" >
+              <div class="col-sm-12 h-12 animate__animated animate__slideInLeft" >
                 <div id="map"></div>
               </div>
-              <div class="col-sm-12 mt-3">
+              <div class="col-sm-12 mt-3 animate__animated animate__slideInLeft">
                 <p id="google_search">(click here to see some pictures of the location or use human icon to do a Street View!)</p>
+              </div>
+              <div class="col-sm-12 animate__animated animate__slideInUp">
+                <button id="confirm_location">Sounds like a plan!</button>
+              </div>
+              <div class="col-sm-12 mt-3 animate__animated animate__slideInUp">
+                <a id="dislike_suggestion" href="random_location.html">Don't like this suggestion? Tap here to get a new one!</a>
               </div>
           </div>
       </div>

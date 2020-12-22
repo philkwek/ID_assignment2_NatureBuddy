@@ -50,12 +50,20 @@ Under the summary, users will also see a small tree which will grow for every ti
 - Started on basic HTML and JS for the random_location page
 - added JSON list for all the possible nature adventure locations
 
-### 21/12/202
+### 21/12/2020
 - Created JS functions to randomize locations and to store list of locations in localStorage
 - Created JS function to check for localStorage location data, adds fresh list if data does not exist
 
 - Coded JS Functions to random_locations.html to now show randomized locations
 - Encountered Major Bug (access to AJAX request blocked by CORS policy), preventing access to proper names for locations and images
+
+### 22/12/2020
+- Connected landing page and random_location page via clickable arrow button
+- Added Animations for random_location page on load
+- Added a refresh for when User does not like suggestion
+- Added Clickable button to confirm suggestion
+
+- Note: "...blocked by CORS policy" issue/error still persistent, cannot display proper names and cannot get information from API about said location (Data needed for next few pages)
 
 ## Credits
 

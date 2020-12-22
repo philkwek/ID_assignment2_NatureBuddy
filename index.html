@@ -18,10 +18,10 @@
 
     <div class="container mt-5 m-3" align=center>
         <div class="row align-items-center">
-            <div class="col-sm-12">
+            <div class="head_text col-sm-12">
               <h2 class="text-left">Hello Explorer!</h2>
             </div>
-            <div class="col-sm-12">
+            <div class="head_text col-sm-12">
               <h2 class="text-left">Craving Adventure?</h2>
             </div>
         </div>
@@ -30,17 +30,20 @@
   <body>
     <div class="container mt-5 m-3 p-3 animate__animated animate__slideInLeft" align=center>
       <div class = "row align-items-center">
-        <div class = "col-sm-12">
+        <div class = "body_text col-sm-12 mr-5">
           <h1 class="text-left">You've come to the right place!</h1>
         </div>
 
-        <div class = "col-sm-12">
-          <h1 class="text-left">Just swipe up to begin!</h1>
+        <div class = "body_text col-sm-12">
+          <h1 class="body_text text-left">Just tap on the arrow to find your next Adventure Spot!</h1>
         </div>
 
       </div>
     </div>
     
+    <div class="animate__animated animate__fadeInDown" id="swipe_down">
+      <a class="arrow-down" href="/random_location.html"></a>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -50,9 +53,5 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
-  <footer>
-    <div class="arrow-down animate__animated animate__fadeInDown">
-      <button type="button" class="hidden_button"></button>
-    </div>
-  </footer>
+  
 </html>
