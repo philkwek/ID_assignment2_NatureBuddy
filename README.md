@@ -65,6 +65,9 @@ Under the summary, users will also see a small tree which will grow for every ti
 
 - Note: "...blocked by CORS policy" issue/error still persistent, cannot display proper names and cannot get information from API about said location (Data needed for next few pages)
 
+### 23/12/2020
+- Fixed Major Bug, pages now properly display names of said locations to visit
+
 ## Credits
 
 ### Media

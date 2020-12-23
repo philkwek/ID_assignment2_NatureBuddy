@@ -1,7 +1,4 @@
-var script = document.createElement('script');
-script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
-script.type = 'text/javascript';
-document.getElementsByTagName('head')[0].appendChild(script);
+
 
 areas = { //this list records whether user has already visited the area through the app
     bukit_timah_reserve: "0",
@@ -66,9 +63,7 @@ function loadAdventure(){ // gets a random number for location and displays rand
 
     console.log(random_location)
 
-    var title_location = document.getElementById("name_of_location");
-    title_location.innerHTML = random_location;
-    
+
 }
 
 if (localStorage.getItem("Area_Array")===null && localStorage.getItem("ListArea_check")===null){ 
@@ -84,18 +79,6 @@ document.getElementById('google_search').onclick=function() { // this code enabl
     window.open('http://images.google.com/search?q='+random_location + " singapore");
 };
 
-
-function findLocation(){
-    var fetch_link = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=" + area_array[adventureNumber][0] + "&inputtype=textquery&fields=photos,formatted_address,name&locationbias=point:" + area_array[adventureNumber][1]+ ","+area_array[adventureNumber][2]+"&key=AIzaSyDDJLG-WvPz1_a2W9EcQQDOQn4wL1NWyuo"
-    $.ajax(fetch_link,{
-        success: (data) => {console.log(data)},
-        error: (err) => {console.log('fetch failed')}
-    })
-}
-
-loadAdventure()
-findLocation()
-
 let map;
 
 function initMap() { // this functions runs the map api
@@ -104,10 +87,37 @@ function initMap() { // this functions runs the map api
         center: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
         zoom:16,
     });
+    var request = {
+        location: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
+        query: random_location,
+    };
+    console.log(request)
+
+    var service = new google.maps.places.PlacesService(map);
+    service.textSearch(request, callback);
+};
+
+function callback(results, status) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+      var marker = new google.maps.Marker({
+        map: map,
+        place: {
+          placeId: results[0].place_id,
+          location: results[0].geometry.location
+        }
+      });
+      
+    }
+    console.log(results[0].name);
+    fixed_location_name = results[0].name;
+    var title_location = document.getElementById("name_of_location");
+    title_location.innerHTML = fixed_location_name;
 }
+
 
 $('#confirm_location').click(function(){ //event listener for button
     console.log("clicked!");
     //window.location="ADD_HTML_OF_NEXT_PAGE"
-})
+});
 
+loadAdventure()
