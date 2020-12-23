@@ -1,5 +1,5 @@
 area_array = [["bukit_timah_reserve",1.35291, 103.77836], ["butterfly_insect_kingdom",1.25542,103.81674],
-["chinese_japanese_garden",1.3364146183943955, 103.72723620276491],
+["chinese_japanese_garden",1.33714,103.72903],
 ["east coast park",1.30138,103.91263],["fort_canning_park",1.29491, 103.84640],
 ["gardens_by_the_bay",1.28156,103.86407],["hort_park",1.27889,103.79986],
 ["jurong_bird_park",1.32086,103.70693],["marina_barrage",1.28065,103.87108],
@@ -12,34 +12,14 @@ area_array = [["bukit_timah_reserve",1.35291, 103.77836], ["butterfly_insect_kin
 ["west_coast_park",1.29150,103.76632],["coney_island",1.40941,103.92116],
 ["stJohn_island",1.21965,103.84825],["pulau_ubin",1.41112,103.95762]]
 
-
-
-function loadAdventure(){ // gets a random number for location and displays random location
-    area_list = JSON.parse(localStorage.getItem('ListArea_check'));
-
-    adventureNumber = Math.floor((Math.random() * 24)); // global variable
-
-    random_location = area_array[adventureNumber][0];
-
-    console.log(random_location)
-
-    saved_location = {
-        "Adventure_Number":adventureNumber,
-        "Location": random_location,
-    }
-
-    console.log(saved_location)
-
-    localStorage.setItem("saved_location", JSON.stringify(saved_location))
-}
-
-
-document.getElementById('google_search').onclick=function() { // this code enables a clickable link to 
-    //find pictures of a location
-    window.open('http://images.google.com/search?q='+random_location + " singapore");
-};
-
 let map;
+
+get_item = localStorage.getItem("saved_location");
+get_item_parsed = JSON.parse(get_item);
+
+adventureNumber = get_item_parsed.Adventure_Number;
+random_location = get_item_parsed.Location;
+
 
 function initMap() { // this functions runs the map api
     lon = area_array[adventureNumber]
@@ -73,11 +53,3 @@ function callback(results, status) {
     var title_location = document.getElementById("name_of_location");
     title_location.innerHTML = fixed_location_name;
 }
-
-
-$('#confirm_location').click(function(){ //event listener for button
-    console.log("clicked!");
-    window.location="confirmed_location.html"
-});
-
-loadAdventure()

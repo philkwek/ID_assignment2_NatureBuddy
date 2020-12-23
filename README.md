@@ -67,6 +67,7 @@ Under the summary, users will also see a small tree which will grow for every ti
 
 ### 23/12/2020
 - Fixed Major Bug, pages now properly display names of said locations to visit
+- Added Confirmed Locations Page
 
 ## Credits
 

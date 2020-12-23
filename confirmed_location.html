@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDJLG-WvPz1_a2W9EcQQDOQn4wL1NWyuo&callback=initMap&libraries=places&v=weekly"
+      defer
+    ></script>
+
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <div class="container mt-5 m-2 animate__animated animate__slideInDown" align=center>
+        <div class="row align-items-center">
+            <div class="col-sm-12">
+              <h5 class="text-left">Adventure Confirmed!</h5>
+            </div>
+            <div class="col-sm-12">
+              <h1 class="text-left" id="name_of_location"></h1>
+            </div>
+        </div>
+    </div>
+    
+  </head>
+  <body>
+        <div class = "container " align=center>
+          <div class="row">
+              <div class="col-sm-12 h-12 animate__animated animate__slideInLeft" >
+                <div id="map"></div>
+              </div>
+              <div class="col-sm-12 mt-4 animate__animated animate__slideInUp">
+                <button id="confirm_location">Take me there!</button>
+              </div>
+              <div class="col-sm-12 mt-1 animate__animated animate__slideInUp">
+                <p id="small_note">(Opens Google Maps)</p>
+              </div>
+          </div>
+      </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="confirmed_location.js"></script>
+  </body>
+</html>
