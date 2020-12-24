@@ -69,6 +69,10 @@ Under the summary, users will also see a small tree which will grow for every ti
 - Fixed Major Bug, pages now properly display names of said locations to visit
 - Added Confirmed Locations Page
 
+### 24/12/2020
+- Added Adventure Page
+- Added a link to confirmed_location.html to open google maps to whatever confirmed location to help user with directions to said location
+
 ## Credits
 
 ### Media

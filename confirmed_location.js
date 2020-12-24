@@ -37,9 +37,11 @@ function initMap() { // this functions runs the map api
     service.textSearch(request, callback);
 };
 
+
+
 function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
-      var marker = new google.maps.Marker({
+      marker = new google.maps.Marker({
         map: map,
         place: {
           placeId: results[0].place_id,
@@ -50,6 +52,20 @@ function callback(results, status) {
     }
     console.log(results[0].name);
     fixed_location_name = results[0].name;
+
+    var locationId = results[0].place_id;
+
     var title_location = document.getElementById("name_of_location");
     title_location.innerHTML = fixed_location_name;
+
+    $('#open_maps').click(function(){ //event listener for button
+      console.log("clicked!");
+      window.open("https://www.google.com/maps/search/?api=1&query=" + area_array[adventureNumber][1] + "," + area_array[adventureNumber][2] + "&query_place_id=" + locationId)
+    });
+  
 }
+
+
+
+
+
