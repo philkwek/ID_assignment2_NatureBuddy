@@ -73,6 +73,10 @@ Under the summary, users will also see a small tree which will grow for every ti
 - Added Adventure Page
 - Added a link to confirmed_location.html to open google maps to whatever confirmed location to help user with directions to said location
 
+### 25/12/2020
+- Added distance travelled indicator
+- Added Countup timer to record time spent
+
 ## Credits
 
 ### Media
