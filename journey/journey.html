@@ -20,12 +20,12 @@
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
     crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 
-    <div class="container mt-5 m-2 animate__animated animate__slideInDown" align=center>
+    <div class="container mt-4 m-2 animate__animated animate__slideInDown" align=center>
         <div class="row align-items-center">
             <div class="col-sm-12">
-              <h5 class="text-left">Just explore and have fun!</h5>
+              <h5 class="text-left">Explore and Have Fun!</h5>
             </div>
             <div class="col-sm-12">
               <h1 class="text-left" id="name_of_location"></h1>
@@ -39,19 +39,34 @@
 
         <div class="row">
 
-            <div class="col-sm-12 h-12 animate__animated animate__slideInLeft" >
+            <div class="col-sm-12 h-12 mt-1 animate__animated animate__slideInLeft" >
                 <div id="map"></div>
             </div>
 
-            <div class="col-sm-12 mt-1 animate_animated animate_slideInUp">
-                <h3 class="small_h3">Whenever you're done, just tap the arrow to end!</h3>
+            <div id="tripmeter" class="col-sm-12 mt-4 animate__animated animate__slideInLeft">
+                  <p class="text-left ml-2">
+                    Distance Travelled from starting location<br/>
+                    <span id="distance" class="text-left">0</span> km
+                  </p>
+            </div>
+
+            <div class="col-sm-12 mt-1 animate__animated animate__slideInLeft">
+                <p class="text-left ml-2">Time Elapsed</p>
+            </div>
+
+            <div class="col-sm-12 animate__animated animate__slideInLeft">
+                <h2 class="text-left ml-2" id="realtime">00:00:00</h2>
+            </div>
+
+            <div class="col-sm-12 mt-3 animate__animated animate__fadeInDown">
+                <h3 class="small_h3">Tap the arrow whenever you're done with your Journey!</h3>
             </div>
 
         </div>
     </div>
 
     <div class="animate__animated animate__fadeInDown" id="swipe_down">
-        <a class="arrow-down-confirmed" href=""></a>
+        <a class="arrow-down-journey" href=""></a>
     </div>
     
 
@@ -62,7 +77,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
     crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-    <script src="INSERTJS.js"></script>
+    <script src="/script.js"></script>
+    <script src="/journey/journey.js"></script>
   </body>
+
+ 
 </html>

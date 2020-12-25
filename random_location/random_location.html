@@ -20,12 +20,12 @@
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
     crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 
     <div class="container mt-5 m-2 animate__animated animate__slideInDown" align=center>
         <div class="row align-items-center">
             <div class="col-sm-12">
-              <h5 class="text-left">Adventure Confirmed!</h5>
+              <h5 class="text-left">You're heading to...</h5>
             </div>
             <div class="col-sm-12">
               <h1 class="text-left" id="name_of_location"></h1>
@@ -35,32 +35,22 @@
     
   </head>
   <body>
-    <div class = "container " align=center>
-
-        <div class="row">
-
-            <div class="col-sm-12 h-12 animate__animated animate__slideInLeft" >
+        <div class = "container " align=center>
+          <div class="row">
+              <div class="col-sm-12 h-12 animate__animated animate__slideInLeft" >
                 <div id="map"></div>
-            </div>
-
-            <div class="col-sm-12 mt-4 animate__animated animate__slideInUp">
-                <button id="open_maps">Take me there!</button>
-            </div>
-
-            <div class="col-sm-12 mt-1 animate__animated animate__slideInUp">
-                <p id="small_note">(Opens Google Maps)</p>
-            </div>
-
-            <div class="col-sm-12 mt-1 animate_animated animate_slideInUp">
-                <h3 class="small_h3">If you're already there, tap the arrow to begin tracking your Journey!</h3>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="animate__animated animate__fadeInDown" id="swipe_down">
-        <a class="arrow-down-confirmed" href=""></a>
-    </div>
+              </div>
+              <div class="col-sm-12 mt-3 animate__animated animate__slideInLeft">
+                <p id="google_search">(click here to see some pictures of the location or use human icon to do a Street View!)</p>
+              </div>
+              <div class="col-sm-12 animate__animated animate__slideInUp">
+                <button id="confirm_location" href="/confirmed_location/confirmed_location.html">Sounds like a plan!</button>
+              </div>
+              <div class="col-sm-12 mt-3 animate__animated animate__slideInUp">
+                <a id="dislike_suggestion" href="/random_location/random_location.html">Don't like this suggestion? Tap here to get a new one!</a>
+              </div>
+          </div>
+      </div>
     
 
     <!-- Optional JavaScript -->
@@ -70,7 +60,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
     crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-    <script src="confirmed_location.js"></script>
+    <script src="/script.js"></script>
+    <script src="/random_location/random_location.js"></script>
   </body>
 </html>

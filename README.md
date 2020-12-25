@@ -77,6 +77,8 @@ Under the summary, users will also see a small tree which will grow for every ti
 - Added distance travelled indicator
 - Added Countup timer to record time spent
 
+- Organised Files into Folders
+
 ## Credits
 
 ### Media

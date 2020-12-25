@@ -77,7 +77,7 @@ function callback(results, status) {
 
 $('#confirm_location').click(function(){ //event listener for button
     console.log("clicked!");
-    window.location="confirmed_location.html"
+    location.href = "/confirmed_location/confirmed_location.html"
 });
 
 loadAdventure()
