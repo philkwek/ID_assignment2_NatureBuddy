@@ -25,10 +25,13 @@ random_location = get_item_parsed.Location;
 
 function initMap() { // this functions runs the map api
     lon = area_array[adventureNumber]
+
     map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
-        zoom:17,
+      center: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
+      zoom:17,
+      mapId:'6ef0b532fe532f6',
     });
+
     var request = {
         location: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
         query: random_location,
@@ -99,6 +102,15 @@ function count_up(){ // count up timer code
               }
   
         $("#realtime").text(hour +":" + plz(mins) + ":" + plz(secs));
+        console.log(hour,mins,secs)
+
+        time_recording = {
+          'hour': hour,
+          'minute': mins,
+          'seconds': secs,
+        }
+
+        localStorage.setItem('time_taken',JSON.stringify(time_recording));
   
   }
   
@@ -110,6 +122,7 @@ function count_up(){ // count up timer code
     }
     return zpad;
   }
+
 }
 
 count_up();

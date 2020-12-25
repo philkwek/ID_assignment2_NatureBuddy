@@ -78,6 +78,7 @@ Under the summary, users will also see a small tree which will grow for every ti
 - Added Countup timer to record time spent
 
 - Organised Files into Folders
+- Added Map Styling 
 
 ## Credits
 

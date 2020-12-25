@@ -26,6 +26,7 @@ function initMap() { // this functions runs the map api
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
         zoom:16,
+        mapId: '6ef0b532fe532f6',
     });
     var request = {
         location: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
