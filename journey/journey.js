@@ -24,22 +24,22 @@ random_location = get_item_parsed.Location;
 
 
 function initMap() { // this functions runs the map api
-    lon = area_array[adventureNumber]
+  lon = area_array[adventureNumber]
 
-    map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
-      zoom:17,
-      mapId:'6ef0b532fe532f6',
-    });
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
+    zoom:17,
+    mapId:'6ef0b532fe532f6',
+  });
 
-    var request = {
-        location: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
-        query: random_location,
-    };
-    console.log(request)
+  var request = {
+      location: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
+      query: random_location,
+  };
+  console.log(request)
 
-    var service = new google.maps.places.PlacesService(map);
-    service.textSearch(request, callback);
+  var service = new google.maps.places.PlacesService(map);
+  service.textSearch(request, callback);
 };
 
 
@@ -125,6 +125,14 @@ function count_up(){ // count up timer code
 
 }
 
+distance_travelled = {
+  'distance': '0',
+};
+
+console.log(distance_travelled)
+
+localStorage.setItem('distance_travelled',JSON.stringify(distance_travelled));
+
 count_up();
 
 
@@ -148,6 +156,9 @@ window.onload = function() { // this function provides the starting location coo
   
 };
 
+
+
+
 navigator.geolocation.watchPosition(function(position) { //this functions provides live coordinates of user
     
     position = {
@@ -156,6 +167,13 @@ navigator.geolocation.watchPosition(function(position) { //this functions provid
     }
 
     var startPos = JSON.parse(localStorage.getItem('starting_position'));
+
+    distance_travelled = {
+      'distance': calculateDistance(startPos.latitude, startPos.longitude,
+      position.latitude, position.longitude),
+    },
+    
+    localStorage.setItem('distance_travelled',JSON.stringify(distance_travelled))
 
     document.getElementById('distance').innerHTML =
         calculateDistance(startPos.latitude, startPos.longitude,

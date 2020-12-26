@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDJLG-WvPz1_a2W9EcQQDOQn4wL1NWyuo&map_ids=6ef0b532fe532f6&libraries=places&v=weekly&callback=initMap"defer></script>
+
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+
+    <div class="container mt-4 m-2 animate__animated animate__slideInDown" align=center>
+        <div class="row align-items-center">
+            <div class="col-sm-12">
+              <h5 class="text-left">Explore and Have Fun!</h5>
+            </div>
+            <div class="col-sm-12">
+              <h1 class="text-left" id="name_of_location"></h1>
+            </div>
+        </div>
+    </div>
+    
+  </head>
+  <body>
+    <div class = "container " align=center>
+
+        <div class="row">
+
+            <div id="tripmeter" class="col-sm-12 mt-4 animate__animated animate__slideInLeft">
+                  <p class="text-left ml-2">
+                    Total Distance Travelled<br/>
+                    <span id="distance" class="text-left">0</span> km
+                  </p>
+            </div>
+
+            <div class="col-sm-12 mt-1 animate__animated animate__slideInLeft">
+                <p class="text-left ml-2">Time Elapsed</p>
+            </div>
+
+            <div class="col-sm-12 animate__animated animate__slideInLeft">
+                <h2 class="text-left ml-2" id="realtime">00:00:00</h2>
+            </div>
+
+            <div class="col-sm-12 mt-3 animate__animated animate__fadeInDown">
+                <h3 class="small_h3">Tap the arrow whenever you're done with your Journey!</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="animate__animated animate__fadeInDown" id="swipe_down">
+        <a class="arrow-down-journey" href="/trip_summary/trip_summary.html"></a>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+    crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+    <script src="/trip_summary/trip_summary.js"></script>
+  </body>
+
+ 
+</html>

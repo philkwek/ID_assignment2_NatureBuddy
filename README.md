@@ -80,6 +80,9 @@ Under the summary, users will also see a small tree which will grow for every ti
 - Organised Files into Folders
 - Added Map Styling 
 
+### 26/12/2020
+- Added Trip Summary Page with data (distance travelled and time taken)
+
 ## Credits
 
 ### Media
