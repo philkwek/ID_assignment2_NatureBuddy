@@ -12,7 +12,14 @@ area_array = [["bukit_timah_reserve",1.35291, 103.77836], ["butterfly_insect_kin
 ["west_coast_park",1.29150,103.76632],["coney_island",1.40941,103.92116],
 ["stJohn_island",1.21965,103.84825],["pulau_ubin",1.41112,103.95762]]
 
+if("number_of_adventures" in localStorage){
 
+} else {
+    number_of_adventures = {
+        'number_of_adventures': 0,
+    }
+    localStorage.setItem("number_of_adventures", JSON.stringify(number_of_adventures))
+}
 
 function loadAdventure(){ // gets a random number for location and displays random location
     area_list = JSON.parse(localStorage.getItem('ListArea_check'));
@@ -22,6 +29,8 @@ function loadAdventure(){ // gets a random number for location and displays rand
     random_location = area_array[adventureNumber][0];
 
     console.log(random_location)
+
+
 
     saved_location = {
         "Adventure_Number":adventureNumber,
@@ -74,9 +83,22 @@ function callback(results, status) {
     var title_location = document.getElementById("name_of_location");
     title_location.innerHTML = fixed_location_name;
 }
+function tree_growth(){
+    number_of_adventures = JSON.parse(localStorage.getItem("number_of_adventures"));
+    number = number_of_adventures.number_of_adventures;
+    number = number + 1;
+    console.log(number)
 
+    number_of_adventures = {
+        'number_of_adventures': number,
+    }
+
+    localStorage.setItem("number_of_adventures", JSON.stringify(number_of_adventures))
+}
 
 $('#confirm_location').click(function(){ //event listener for button
+    tree_growth(),
+    
     console.log("clicked!");
     location.href = "/confirmed_location/confirmed_location.html"
 });
