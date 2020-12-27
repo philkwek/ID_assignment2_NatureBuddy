@@ -83,6 +83,9 @@ Under the summary, users will also see a small tree which will grow for every ti
 ### 26/12/2020
 - Added Trip Summary Page with data (distance travelled and time taken)
 
+### 27/12/2020
+- Added Live Location Marker to Journey.html so user can see real time location on the map to help them navigate.
+
 ## Credits
 
 ### Media

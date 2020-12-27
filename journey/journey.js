@@ -22,15 +22,33 @@ get_item_parsed = JSON.parse(get_item);
 adventureNumber = get_item_parsed.Adventure_Number;
 random_location = get_item_parsed.Location;
 
+function getLocation (){
+  console.log('getting location...')
+  navigator.geolocation.watchPosition(function(position){
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: position.coords.latitude, lng: position.coords.longitude },
+      zoom:17,
+      mapId:'6ef0b532fe532f6',
+    });
+
+    live_position = { lat:position.coords.latitude, lng:position.coords.longitude};
+    mark = new google.maps.Marker(
+      { position: live_position,
+        map:map,
+      });
+  })
+}
 
 function initMap() { // this functions runs the map api
-  lon = area_array[adventureNumber]
+
 
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
     zoom:17,
     mapId:'6ef0b532fe532f6',
   });
+
+  var t=setInterval(getLocation,10000) //function sets live location tracker
 
   var request = {
       location: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
@@ -41,6 +59,7 @@ function initMap() { // this functions runs the map api
   var service = new google.maps.places.PlacesService(map);
   service.textSearch(request, callback);
 };
+
 
 
 
