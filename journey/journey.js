@@ -22,9 +22,42 @@ get_item_parsed = JSON.parse(get_item);
 adventureNumber = get_item_parsed.Adventure_Number;
 random_location = get_item_parsed.Location;
 
+window.onload = function() { // this function provides the starting location coordinates
+  var startPost;
+  navigator.geolocation.getCurrentPosition(function(startPos) {
+    
+    startPos = {
+        "latitude":startPos.coords.latitude,
+        "longitude":startPos.coords.longitude,
+    }
+    localStorage.setItem('starting_position',JSON.stringify(startPos))
+    localStorage.setItem('previous_location',JSON.stringify(startPos))
+  });
+  
+};
+
+function calculateDistance(lat1, lon1, lat2, lon2) {
+  var R = 6371; // km
+  var dLat = (lat2 - lat1).toRad();
+  var dLon = (lon2 - lon1).toRad(); 
+  var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+          Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
+          Math.sin(dLon / 2) * Math.sin(dLon / 2); 
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)); 
+  var d = R * c;
+  return d;
+}
+Number.prototype.toRad = function() {
+  return this * Math.PI / 180;
+};
+
 function getLocation (){
+
   console.log('getting location...')
-  navigator.geolocation.watchPosition(function(position){
+
+  previous_location = JSON.parse(localStorage.getItem('previous_location')) //previous position
+
+  navigator.geolocation.getCurrentPosition(function(position){ //current position
     map = new google.maps.Map(document.getElementById("map"), {
       center: { lat: position.coords.latitude, lng: position.coords.longitude },
       zoom:17,
@@ -36,8 +69,27 @@ function getLocation (){
       { position: live_position,
         map:map,
       });
-  })
-}
+    
+    startPos = {
+    "latitude":position.coords.latitude,
+    "longitude":position.coords.longitude,
+  }
+
+    localStorage.setItem('previous_location',JSON.stringify(startPos))
+
+    distance = calculateDistance(previous_location.latitude, previous_location.longitude,
+      position.coords.latitude, position.coords.longitude);
+    distance = +distance.toFixed(2); // rounds off the decimals
+
+    console.log(distance)
+
+    document.getElementById('distance').innerHTML = distance;
+
+  });
+
+  
+      
+};
 
 function initMap() { // this functions runs the map api
 
@@ -89,7 +141,7 @@ function callback(results, status) {
       window.open("https://www.google.com/maps/search/?api=1&query=" + area_array[adventureNumber][1] + "," + area_array[adventureNumber][2] + "&query_place_id=" + locationId)
     });
   
-}
+};
 
 function count_up(){ // count up timer code
   $(document).ready (function () {
@@ -133,9 +185,9 @@ function count_up(){ // count up timer code
 
         localStorage.setItem('time_taken',JSON.stringify(time_recording));
   
-  }
+};
   
-  function plz(digit){
+function plz(digit){
   
     var zpad = digit + '';
     if (digit < 10) {
@@ -144,18 +196,9 @@ function count_up(){ // count up timer code
     return zpad;
   }
 
-}
-
-distance_travelled = {
-  'distance': '0',
 };
 
-console.log(distance_travelled)
-
-localStorage.setItem('distance_travelled',JSON.stringify(distance_travelled));
-
 count_up();
-
 
 
 if (navigator.geolocation) { //this checks if device/browser supports Location Services
@@ -163,60 +206,16 @@ if (navigator.geolocation) { //this checks if device/browser supports Location S
   }
   else {
     console.log('Geolocation is not supported for this Browser/OS version yet.');
-
-window.onload = function() { // this function provides the starting location coordinates
-  var startPost;
-  navigator.geolocation.getCurrentPosition(function(startPos) {
-    
-    startPos = {
-        "latitude":startPos.coords.latitude,
-        "longitude":startPos.coords.longitude,
-    }
-    localStorage.setItem('starting_position',JSON.stringify(startPos))
-  });
-  
-};
-
-
-navigator.geolocation.watchPosition(function(position) { //this functions provides live coordinates of user
-    
-    position = {
-        "latitude":position.coords.latitude,
-        "longitude":position.coords.longitude,
-    }
-
-    var startPos = JSON.parse(localStorage.getItem('starting_position'));
-
-    distance_travelled = {
-      'distance': calculateDistance(startPos.latitude, startPos.longitude,
-      position.latitude, position.longitude),
-    },
-    
-    localStorage.setItem('distance_travelled',JSON.stringify(distance_travelled))
-
-    document.getElementById('distance').innerHTML =
-        calculateDistance(startPos.latitude, startPos.longitude,
-                        position.latitude, position.longitude);
-
-  });
-
-
-
-
-function calculateDistance(lat1, lon1, lat2, lon2) {
-    var R = 6371; // km
-    var dLat = (lat2 - lat1).toRad();
-    var dLon = (lon2 - lon1).toRad(); 
-    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-            Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
-            Math.sin(dLon / 2) * Math.sin(dLon / 2); 
-    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)); 
-    var d = R * c;
-    return d;
   }
-  Number.prototype.toRad = function() {
-    return this * Math.PI / 180;
-  }};
+    
+
+
+
+
+
+
+
+
 
 
   
