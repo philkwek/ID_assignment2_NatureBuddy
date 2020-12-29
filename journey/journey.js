@@ -178,8 +178,6 @@ window.onload = function() { // this function provides the starting location coo
 };
 
 
-
-
 navigator.geolocation.watchPosition(function(position) { //this functions provides live coordinates of user
     
     position = {
