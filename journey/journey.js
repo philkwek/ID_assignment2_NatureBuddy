@@ -48,6 +48,8 @@ function initMap() { // this functions runs the map api
     mapId:'6ef0b532fe532f6',
   });
 
+  getLocation();
+
   var t=setInterval(getLocation,10000) //function sets live location tracker
 
   var request = {

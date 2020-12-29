@@ -96,6 +96,29 @@ function callback(results, status) {
   
 }
 
+console.log(number_of_adventures)
 
+function addImage() {
+
+    console.log('image_running')
+
+    if (number_of_adventures < 2) {
+        document.getElementById('picture_of_tree').src='/trip_summary/trees/trees-01.png';
+
+    } else if (number_of_adventures < 4) {
+        document.getElementById('picture_of_tree').src='/trip_summary/trees/trees-02.png';
+
+    } else if (number_of_adventures < 8) {
+        document.getElementById('picture_of_tree').src='/trip_summary/trees/trees-03.png';
+
+    } else if (number_of_adventures < 16) {
+        document.getElementById('picture_of_tree').src='/trip_summary/trees/trees-04.png';
+
+    } else {
+        document.getElementById('picture_of_tree').src='/trip_summary/trees/trees-05.png';
+    }
+}
+
+addImage()
 
 

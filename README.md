@@ -87,6 +87,9 @@ Under the summary, users will also see a small tree which will grow for every ti
 - Added Live Location Marker to Journey.html so user can see real time location on the map to help them navigate.
 - Added Map to Trip Summary and also added the base HTML and Javascript laywork for Tree Sapling growth Gamification
 
+### 29/12/2020
+- Finished Tree Gamification 
+
 ## Credits
 
 ### Media
