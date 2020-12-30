@@ -89,6 +89,7 @@ function getLocation (){
 
     distance_travelled = JSON.parse(localStorage.getItem('distance_travelled'))
     distance = distance + distance_travelled.distance
+    distance = +distance.toFixed(2);
 
     distance_travelled = {
       'distance':distance,
