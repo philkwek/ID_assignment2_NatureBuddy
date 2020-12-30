@@ -33,6 +33,12 @@ window.onload = function() { // this function provides the starting location coo
     localStorage.setItem('starting_position',JSON.stringify(startPos))
     localStorage.setItem('previous_location',JSON.stringify(startPos))
   });
+
+  distance_travelled = {
+    'distance': 0,
+  }
+
+  localStorage.setItem('distance_travelled',JSON.stringify(distance_travelled))
   
 };
 
@@ -80,6 +86,14 @@ function getLocation (){
     distance = calculateDistance(previous_location.latitude, previous_location.longitude,
       position.coords.latitude, position.coords.longitude);
     distance = +distance.toFixed(2); // rounds off the decimals
+
+    distance_travelled = JSON.parse(localStorage.getItem('distance_travelled'))
+    distance = distance + distance_travelled.distance
+
+    distance_travelled = {
+      'distance':distance,
+    }
+    localStorage.setItem('distance_travelled',JSON.stringify(distance_travelled))
 
     console.log(distance)
 

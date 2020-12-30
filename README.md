@@ -91,6 +91,9 @@ Under the summary, users will also see a small tree which will grow for every ti
 - Finished Tree Gamification 
 - Fixed issue with distance tracker not tracking distance properly
 
+### 30/12/2020
+- Redone Distance Tracking code
+
 ## Credits
 
 ### Media
