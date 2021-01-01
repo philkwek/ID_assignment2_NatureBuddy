@@ -18,6 +18,20 @@ var distance_travelled;
 var saved_location;
 
 function enter_saved_data(){
+
+    if("adventure_history" in localStorage){
+
+        adventure_history = JSON.parse(localStorage.getItem('adventure_history'))
+
+    } else {
+        adventure_history = {
+            'history': [
+                
+            ]
+        }
+        localStorage.setItem("adventure_history", JSON.stringify(adventure_history))
+    }
+
     time_taken = JSON.parse(localStorage.getItem('time_taken'));
     distance_travelled = JSON.parse(localStorage.getItem('distance_travelled'));
     saved_location = JSON.parse(localStorage.getItem('saved_location'));
@@ -27,8 +41,17 @@ function enter_saved_data(){
     random_location = saved_location.Location;
     number_of_adventures = number_of_adventures.number_of_adventures;
 
+    if (adventure_history.history.length < number_of_adventures){ // code ensures history does not have duplicates
+        adventure_history['history'].push({
+            location: random_location,
+            areaArray_number: adventureNumber,
+            duration: time_taken,
+            adventure_number:number_of_adventures,
+        })
+    }; 
 
-    
+    localStorage.setItem("adventure_history", JSON.stringify(adventure_history))
+
     console.log(time_taken)
     console.log(distance_travelled)
     console.log(saved_location)
