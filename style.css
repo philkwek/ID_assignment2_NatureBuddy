@@ -99,6 +99,10 @@
 
 /*confirmed location css section*/
 
+#bottom_spacing{
+    height:1rem;
+}
+
 #open_maps{
     width:12rem;
     height:3rem;
