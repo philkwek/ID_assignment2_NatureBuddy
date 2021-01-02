@@ -41,16 +41,19 @@ function enter_saved_data(){
     random_location = saved_location.Location;
     number_of_adventures = number_of_adventures.number_of_adventures;
 
-    if (adventure_history.history.length < number_of_adventures){ // code ensures history does not have duplicates
-        adventure_history['history'].push({
-            location: random_location,
-            areaArray_number: adventureNumber,
-            duration: time_taken,
-            adventure_number:number_of_adventures,
-        })
-    }; 
 
-    localStorage.setItem("adventure_history", JSON.stringify(adventure_history))
+    
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = dd + '/' + mm + '/' + yyyy;
+    console.log(today)
+
+    
+
+    
 
     console.log(time_taken)
     console.log(distance_travelled)
@@ -116,6 +119,26 @@ function callback(results, status) {
 
     var title_location = document.getElementById("location_summary");
     title_location.innerHTML = fixed_location_name;
+
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = dd + '/' + mm + '/' + yyyy;
+    console.log(today)
+
+
+    if (adventure_history.history.length < number_of_adventures){ // code ensures history does not have duplicates
+        adventure_history['history'].push({
+            duration: time_taken,
+            adventure_number:number_of_adventures,
+            date: today,
+            distance_travelled: distance_travelled.distance,
+            location_name: fixed_location_name,
+        })
+    }; 
+    localStorage.setItem("adventure_history", JSON.stringify(adventure_history))
   
 }
 

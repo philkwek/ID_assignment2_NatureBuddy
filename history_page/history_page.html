@@ -31,24 +31,67 @@
     <div class="container mt-4 m-3 p-3 animate__animated animate__slideInLeft" align=center>
       <div class = "row align-items-center">
 
-        <div class = "col-sm-12 mr-5">
+        <div class="col-sm-12 mr-5">
+            <h2 class="text-left" id="no_history"></h2>
+        </div>
 
-            <h2 class="text-left">1. &nbsp;<span id="location_name_1"></span></h2>
+        <div class = "col-sm-12 mr-5" id="history_list">
 
-            <p class="text-left history_details">Distance Travelled<br>
-                <span class = "history_details_numbers" id="distance_travelled_1"></span>km</p>
 
-            <p class="text-left history_details">Duration<br>
-                <span class = "history_details_numbers" id="duration_1"></span></p>
+            <div id="history_group_1">
+                <h2 class="text-left"><span id="location_name_1"></span></h2>
 
-            
-            <h2 class="text-left mt-5">2. &nbsp;<span id="location_name_2"></span></h2>
+                <p class="text-left history_details">Date<br>
+                    <span class="history_details_numbers" id="date_1"></span></p>
 
-            <p class="text-left history_details">Distance Travelled<br>
-                <span class = "history_details_numbers" id="distance_travelled_2"></span>km</p>
+                <p class="text-left history_details">Distance Travelled<br>
+                    <span class = "history_details_numbers" id="distance_travelled_1"></span>km</p>
 
-            <p class="text-left history_details">Duration<br>
-                <span class = "history_details_numbers" id="duration_2"></span></p>
+                <p class="text-left history_details">Duration<br>
+                    <span class = "history_details_numbers" id="duration_1"></span></p>
+            </div>
+
+
+            <div id="history_group_2">
+                <h2 class="text-left mt-5"><span id="location_name_2"></span></h2>
+
+                <p class="text-left history_details">Date<br>
+                    <span class="history_details_numbers" id="date_2"></span></p>
+
+                <p class="text-left history_details">Distance Travelled<br>
+                    <span class = "history_details_numbers" id="distance_travelled_2"></span>km</p>
+
+                <p class="text-left history_details">Duration<br>
+                    <span class = "history_details_numbers" id="duration_2"></span></p>
+            </div>
+
+
+            <div id="history_group_3">
+                <h2 class="text-left mt-5"><span id="location_name_3"></span></h2>
+
+                <p class="text-left history_details">Date<br>
+                    <span class="history_details_numbers" id="date_3"></span></p>
+
+                <p class="text-left history_details">Distance Travelled<br>
+                    <span class = "history_details_numbers" id="distance_travelled_3"></span>km</p>
+
+                <p class="text-left history_details">Duration<br>
+                    <span class = "history_details_numbers" id="duration_3"></span></p>
+            </div>
+
+
+            <div id="history_group_4">
+                <h2 class="text-left mt-5"><span id="location_name_4"></span></h2>
+
+                <p class="text-left history_details">Date<br>
+                    <span class="history_details_numbers" id="date_4"></span></p>
+
+                <p class="text-left history_details">Distance Travelled<br>
+                    <span class = "history_details_numbers" id="distance_travelled_4"></span>km</p>
+
+                <p class="text-left history_details">Duration<br>
+                    <span class = "history_details_numbers" id="duration_4"></span></p>
+            </div>
 
         </div>
 
@@ -56,8 +99,10 @@
     </div>
     
     <div class="animate__animated animate__fadeInDown" id="swipe_down">
-      <a class="arrow-down" href="/random_location/random_location.html"></a>
+        <a class="arrow-down-history" href="/index.html">Tap to return to landing page</a>
     </div>
+
+    <img src="/history_page/empty.png" class = "image-fluid" id = "history_bottom_spacing">
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

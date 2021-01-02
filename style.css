@@ -1,6 +1,10 @@
 
 /*Landing Page css code*/
 
+#tap_history{
+    text-align: left;
+}
+
 .head_text h2 {
     font-size: 1.5rem;
     font-style: italic;
@@ -100,7 +104,7 @@
 /*confirmed location css section*/
 
 #bottom_spacing{
-    height:10rem;
+    height:11rem;
     width: 1rem;
 }
 
@@ -189,6 +193,68 @@
 }
 
 .arrow-down-journey::after{
+    content:"";
+    width:40px;
+    height:40px;
+    position: absolute;
+    margin: auto;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    border-right:4px solid rgb(90, 90, 90);
+    border-bottom:4px solid rgb(90, 90, 90);
+    -webkit-transform: rotate(45deg);
+    -webkit-animation:3s arrow infinite ease;
+    animation:3s arrow infinite ease;
+}
+
+@-webkit-keyframes arrow {
+    0%, 100%{
+        top:50px;
+    }
+    50%{
+        top:80px;
+    }
+
+}
+
+@keyframes arrow{
+    0%, 100%{
+        top:50px;
+    }
+    50%{
+        top:80px;
+    }
+}
+
+/* history page css */
+
+#history_bottom_spacing{
+    width: 1rem;
+    height: 12rem;
+}
+
+.history_details{
+    color:#707070
+}
+
+.history_details_numbers{
+    font-size: 1.5rem;
+    color:rgb(34, 33, 33)
+}
+
+.arrow-down-history{
+    width:100%;
+    margin: 0 auto;
+    text-align:center;
+    position: relative;
+    top:3rem;
+    color: black;
+    display:block;
+}
+
+.arrow-down-history::after{
     content:"";
     width:40px;
     height:40px;
