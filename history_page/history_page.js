@@ -25,6 +25,18 @@ function plz(digit){
 
 function loadHistory(){
 
+    let history_group_1 = document.querySelector('#history_group_1')
+    history_group_1.style.display = "block"
+
+    let history_group_2 = document.querySelector('#history_group_2')
+    history_group_2.style.display = "block"
+
+    let history_group_3 = document.querySelector('#history_group_3')
+    history_group_3.style.display = "block"
+
+    let history_group_4 = document.querySelector('#history_group_4')
+    history_group_4.style.display = "block"
+
     if ('adventure_history' in localStorage){
         adventure_history = JSON.parse(localStorage.getItem('adventure_history'))
         for (i = 0; i<4; i++){
@@ -44,27 +56,31 @@ function loadHistory(){
             }
         }
 
-        for (i = 0; i<adventure_history.history.length; i++) {
+        if (adventure_history.history.length > 4) {
+            var loop_length = 4
+        } else {
+            var loop_length = adventure_history.history.length
+        }
+
+    
+        for (i = 0; i<loop_length; i++) {
             console.log('loop!')
-            console.log(i)
 
             history_number = i + 1
 
             location_name = adventure_history.history[i].location_name
-            console.log(location_name)
             var name_id = 'location_name_' + history_number
             document.getElementById(name_id).innerHTML = location_name
 
 
             date = adventure_history.history[i].date
             var date_id = 'date_' + history_number
-            console.log(date)
             document.getElementById(date_id).innerHTML = date
 
             distance_travelled = adventure_history.history[i].distance_travelled
             var distance_id = 'distance_travelled_' + history_number
             document.getElementById(distance_id).innerHTML = distance_travelled
-            console.log(distance_travelled)
+
 
             duration = adventure_history.history[i].duration
             var duration_id = 'duration_' + history_number
@@ -81,8 +97,547 @@ function loadHistory(){
         page_div.style.display = "none"
 
     }
-}
+
+
+    let page_2 = document.querySelector('#page_2')
+    let page_3 = document.querySelector('#page_3')
+    let page_4 = document.querySelector('#page_4')
+    let page_5 = document.querySelector('#page_5')
+    
+    if (adventure_history.history.length <= 4) {
+        page_2.style.display = "none"
+        page_3.style.display = "none"
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <=8) {
+        page_3.style.display = "none"
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <= 12) {
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <= 16) {
+        page_5.style.display = "none"
+    } else {
+
+    };
+
+    console.log(adventure_history)
+        
+};
+
+function loadHistory_2(){
+
+    let history_group_1 = document.querySelector('#history_group_1')
+    history_group_1.style.display = "none"
+
+    let history_group_2 = document.querySelector('#history_group_2')
+    history_group_2.style.display = "none"
+
+    let history_group_3 = document.querySelector('#history_group_3')
+    history_group_3.style.display = "none"
+
+    let history_group_4 = document.querySelector('#history_group_4')
+    history_group_4.style.display = "none"
+
+    if ('adventure_history' in localStorage){
+        adventure_history = JSON.parse(localStorage.getItem('adventure_history'))
+        
+
+        if (adventure_history.history.length > 8) {
+            var loop_length = 4
+        } else {
+            var loop_length = adventure_history.history.length
+        }
+
+        
+        for (i = 0; i<loop_length; i++) {
+
+            array_number = i + 4
+
+            if (adventure_history.history[array_number] == null){
+                break
+            } else {}
+
+            console.log('loop!')
+
+            history_number = i + 1
+
+            var history_group = '#history_group_' + history_number
+            let group = document.querySelector(history_group)
+            group.style.display = "block"
+            
+            
+            location_name = adventure_history.history[array_number].location_name
+            var name_id = 'location_name_' + history_number
+            document.getElementById(name_id).innerHTML = location_name
+
+
+            date = adventure_history.history[array_number].date
+            var date_id = 'date_' + history_number
+            document.getElementById(date_id).innerHTML = date
+
+            distance_travelled = adventure_history.history[array_number].distance_travelled
+            var distance_id = 'distance_travelled_' + history_number
+            document.getElementById(distance_id).innerHTML = distance_travelled
+
+
+            duration = adventure_history.history[array_number].duration
+            var duration_id = 'duration_' + history_number
+            var hour = duration.hour;
+            var mins = duration.minute;
+            var secs = duration.seconds;
+            time = hour +":" + plz(mins) + ":" + plz(secs)
+            document.getElementById(duration_id).innerHTML = time
+        }
+    } else {
+        document.getElementById('no_history').innerHTML = 'No recent history!'
+
+        let page_div = document.querySelector('#history_list')
+        page_div.style.display = "none"
+
+    }
+
+
+    let page_2 = document.querySelector('#page_2')
+    let page_3 = document.querySelector('#page_3')
+    let page_4 = document.querySelector('#page_4')
+    let page_5 = document.querySelector('#page_5')
+    
+    if (adventure_history.history.length <= 4) {
+        page_2.style.display = "none"
+        page_3.style.display = "none"
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <=8) {
+        page_3.style.display = "none"
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <= 12) {
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <= 16) {
+        page_5.style.display = "none"
+    } else {
+
+    };
+
+    console.log(adventure_history)
+        
+};
+
+function loadHistory_3(){
+
+    let history_group_1 = document.querySelector('#history_group_1')
+    history_group_1.style.display = "none"
+
+    let history_group_2 = document.querySelector('#history_group_2')
+    history_group_2.style.display = "none"
+
+    let history_group_3 = document.querySelector('#history_group_3')
+    history_group_3.style.display = "none"
+
+    let history_group_4 = document.querySelector('#history_group_4')
+    history_group_4.style.display = "none"
+
+    if ('adventure_history' in localStorage){
+        adventure_history = JSON.parse(localStorage.getItem('adventure_history'))
+        
+
+        if (adventure_history.history.length > 12) {
+            var loop_length = 4
+        } else {
+            var loop_length = adventure_history.history.length
+        }
+
+        
+        for (i = 0; i<loop_length; i++) {
+
+            array_number = i + 8
+
+            if (adventure_history.history[array_number] == null){
+                break
+            } else {}
+
+            console.log('loop!')
+
+            history_number = i + 1
+
+            var history_group = '#history_group_' + history_number
+            let group = document.querySelector(history_group)
+            group.style.display = "block"
+            
+            
+            location_name = adventure_history.history[array_number].location_name
+            var name_id = 'location_name_' + history_number
+            document.getElementById(name_id).innerHTML = location_name
+
+
+            date = adventure_history.history[array_number].date
+            var date_id = 'date_' + history_number
+            document.getElementById(date_id).innerHTML = date
+
+            distance_travelled = adventure_history.history[array_number].distance_travelled
+            var distance_id = 'distance_travelled_' + history_number
+            document.getElementById(distance_id).innerHTML = distance_travelled
+
+
+            duration = adventure_history.history[array_number].duration
+            var duration_id = 'duration_' + history_number
+            var hour = duration.hour;
+            var mins = duration.minute;
+            var secs = duration.seconds;
+            time = hour +":" + plz(mins) + ":" + plz(secs)
+            document.getElementById(duration_id).innerHTML = time
+        }
+    } else {
+        document.getElementById('no_history').innerHTML = 'No recent history!'
+
+        let page_div = document.querySelector('#history_list')
+        page_div.style.display = "none"
+
+    }
+
+
+    let page_2 = document.querySelector('#page_2')
+    let page_3 = document.querySelector('#page_3')
+    let page_4 = document.querySelector('#page_4')
+    let page_5 = document.querySelector('#page_5')
+    
+    if (adventure_history.history.length <= 4) {
+        page_2.style.display = "none"
+        page_3.style.display = "none"
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <=8) {
+        page_3.style.display = "none"
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <= 12) {
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <= 16) {
+        page_5.style.display = "none"
+    } else {
+
+    };
+
+    console.log(adventure_history)
+        
+};
+
+function loadHistory_4(){
+
+    let history_group_1 = document.querySelector('#history_group_1')
+    history_group_1.style.display = "none"
+
+    let history_group_2 = document.querySelector('#history_group_2')
+    history_group_2.style.display = "none"
+
+    let history_group_3 = document.querySelector('#history_group_3')
+    history_group_3.style.display = "none"
+
+    let history_group_4 = document.querySelector('#history_group_4')
+    history_group_4.style.display = "none"
+
+    if ('adventure_history' in localStorage){
+        adventure_history = JSON.parse(localStorage.getItem('adventure_history'))
+        
+
+        if (adventure_history.history.length > 16) {
+            var loop_length = 4
+        } else {
+            var loop_length = adventure_history.history.length
+        }
+
+        
+        for (i = 0; i<loop_length; i++) {
+
+            array_number = i + 12
+
+            if (adventure_history.history[array_number] == null){
+                break
+            } else {}
+
+            console.log('loop!')
+
+            history_number = i + 1
+
+            var history_group = '#history_group_' + history_number
+            let group = document.querySelector(history_group)
+            group.style.display = "block"
+            
+            
+            location_name = adventure_history.history[array_number].location_name
+            var name_id = 'location_name_' + history_number
+            document.getElementById(name_id).innerHTML = location_name
+
+
+            date = adventure_history.history[array_number].date
+            var date_id = 'date_' + history_number
+            document.getElementById(date_id).innerHTML = date
+
+            distance_travelled = adventure_history.history[array_number].distance_travelled
+            var distance_id = 'distance_travelled_' + history_number
+            document.getElementById(distance_id).innerHTML = distance_travelled
+
+
+            duration = adventure_history.history[array_number].duration
+            var duration_id = 'duration_' + history_number
+            var hour = duration.hour;
+            var mins = duration.minute;
+            var secs = duration.seconds;
+            time = hour +":" + plz(mins) + ":" + plz(secs)
+            document.getElementById(duration_id).innerHTML = time
+        }
+    } else {
+        document.getElementById('no_history').innerHTML = 'No recent history!'
+
+        let page_div = document.querySelector('#history_list')
+        page_div.style.display = "none"
+
+    }
+
+
+    let page_2 = document.querySelector('#page_2')
+    let page_3 = document.querySelector('#page_3')
+    let page_4 = document.querySelector('#page_4')
+    let page_5 = document.querySelector('#page_5')
+    
+    if (adventure_history.history.length <= 4) {
+        page_2.style.display = "none"
+        page_3.style.display = "none"
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <=8) {
+        page_3.style.display = "none"
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <= 12) {
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <= 16) {
+        page_5.style.display = "none"
+    } else {
+
+    };
+
+    console.log(adventure_history)
+        
+};
+
+function loadHistory_3(){
+
+    let history_group_1 = document.querySelector('#history_group_1')
+    history_group_1.style.display = "none"
+
+    let history_group_2 = document.querySelector('#history_group_2')
+    history_group_2.style.display = "none"
+
+    let history_group_3 = document.querySelector('#history_group_3')
+    history_group_3.style.display = "none"
+
+    let history_group_4 = document.querySelector('#history_group_4')
+    history_group_4.style.display = "none"
+
+    if ('adventure_history' in localStorage){
+        adventure_history = JSON.parse(localStorage.getItem('adventure_history'))
+        
+
+        if (adventure_history.history.length > 12) {
+            var loop_length = 4
+        } else {
+            var loop_length = adventure_history.history.length
+        }
+
+        
+        for (i = 0; i<loop_length; i++) {
+
+            array_number = i + 8
+
+            if (adventure_history.history[array_number] == null){
+                break
+            } else {}
+
+            console.log('loop!')
+
+            history_number = i + 1
+
+            var history_group = '#history_group_' + history_number
+            let group = document.querySelector(history_group)
+            group.style.display = "block"
+            
+            
+            location_name = adventure_history.history[array_number].location_name
+            var name_id = 'location_name_' + history_number
+            document.getElementById(name_id).innerHTML = location_name
+
+
+            date = adventure_history.history[array_number].date
+            var date_id = 'date_' + history_number
+            document.getElementById(date_id).innerHTML = date
+
+            distance_travelled = adventure_history.history[array_number].distance_travelled
+            var distance_id = 'distance_travelled_' + history_number
+            document.getElementById(distance_id).innerHTML = distance_travelled
+
+
+            duration = adventure_history.history[array_number].duration
+            var duration_id = 'duration_' + history_number
+            var hour = duration.hour;
+            var mins = duration.minute;
+            var secs = duration.seconds;
+            time = hour +":" + plz(mins) + ":" + plz(secs)
+            document.getElementById(duration_id).innerHTML = time
+        }
+    } else {
+        document.getElementById('no_history').innerHTML = 'No recent history!'
+
+        let page_div = document.querySelector('#history_list')
+        page_div.style.display = "none"
+
+    }
+
+
+    let page_2 = document.querySelector('#page_2')
+    let page_3 = document.querySelector('#page_3')
+    let page_4 = document.querySelector('#page_4')
+    let page_5 = document.querySelector('#page_5')
+    
+    if (adventure_history.history.length <= 4) {
+        page_2.style.display = "none"
+        page_3.style.display = "none"
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <=8) {
+        page_3.style.display = "none"
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <= 12) {
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <= 16) {
+        page_5.style.display = "none"
+    } else {
+
+    };
+
+    console.log(adventure_history)
+        
+};
+
+function loadHistory_5(){
+
+    let history_group_1 = document.querySelector('#history_group_1')
+    history_group_1.style.display = "none"
+
+    let history_group_2 = document.querySelector('#history_group_2')
+    history_group_2.style.display = "none"
+
+    let history_group_3 = document.querySelector('#history_group_3')
+    history_group_3.style.display = "none"
+
+    let history_group_4 = document.querySelector('#history_group_4')
+    history_group_4.style.display = "none"
+
+    if ('adventure_history' in localStorage){
+        adventure_history = JSON.parse(localStorage.getItem('adventure_history'))
+        
+
+        if (adventure_history.history.length > 20) {
+            var loop_length = 4
+        } else {
+            var loop_length = adventure_history.history.length
+        }
+
+        
+        for (i = 0; i<loop_length; i++) {
+
+            array_number = i + 16
+
+            if (adventure_history.history[array_number] == null){
+                break
+            } else {}
+
+            console.log('loop!')
+
+            history_number = i + 1
+
+            var history_group = '#history_group_' + history_number
+            let group = document.querySelector(history_group)
+            group.style.display = "block"
+            
+            
+            location_name = adventure_history.history[array_number].location_name
+            var name_id = 'location_name_' + history_number
+            document.getElementById(name_id).innerHTML = location_name
+
+
+            date = adventure_history.history[array_number].date
+            var date_id = 'date_' + history_number
+            document.getElementById(date_id).innerHTML = date
+
+            distance_travelled = adventure_history.history[array_number].distance_travelled
+            var distance_id = 'distance_travelled_' + history_number
+            document.getElementById(distance_id).innerHTML = distance_travelled
+
+
+            duration = adventure_history.history[array_number].duration
+            var duration_id = 'duration_' + history_number
+            var hour = duration.hour;
+            var mins = duration.minute;
+            var secs = duration.seconds;
+            time = hour +":" + plz(mins) + ":" + plz(secs)
+            document.getElementById(duration_id).innerHTML = time
+        }
+    } else {
+        document.getElementById('no_history').innerHTML = 'No recent history!'
+
+        let page_div = document.querySelector('#history_list')
+        page_div.style.display = "none"
+
+    }
+
+
+    let page_2 = document.querySelector('#page_2')
+    let page_3 = document.querySelector('#page_3')
+    let page_4 = document.querySelector('#page_4')
+    let page_5 = document.querySelector('#page_5')
+    
+    if (adventure_history.history.length <= 4) {
+        page_2.style.display = "none"
+        page_3.style.display = "none"
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <=8) {
+        page_3.style.display = "none"
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <= 12) {
+        page_4.style.display = "none"
+        page_5.style.display = "none"
+    } else if (adventure_history.history.length <= 16) {
+        page_5.style.display = "none"
+    } else {
+
+    };
+
+    console.log(adventure_history)
+        
+};
+
+
+
+    
+
 
 
 
 loadHistory()
+
+document.getElementById('page_1').onclick = loadHistory;
+document.getElementById('page_2').onclick = loadHistory_2;
+document.getElementById('page_3').onclick = loadHistory_3;
+document.getElementById('page_4').onclick = loadHistory_4;
+document.getElementById('page_5').onclick = loadHistory_5;
+

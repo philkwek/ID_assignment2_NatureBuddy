@@ -94,11 +94,14 @@ Under the summary, users will also see a small tree which will grow for every ti
 ### 30/12/2020
 - Redone Distance Tracking code
 
-### 1/1/2020
+### 1/1/2021
 - Added History HTML page to check previous adventures
 
-### 2/1/2020
+### 2/1/2021
 - Added Javascript to view History (note: as of now, it can only display up to 4 previous locations, will work on a page refresh code to allow to view more.)
+
+### 3/1/2021
+- Completed View History Page
 
 ## Credits
 
