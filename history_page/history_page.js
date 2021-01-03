@@ -104,25 +104,25 @@ function loadHistory(){
     let page_4 = document.querySelector('#page_4')
     let page_5 = document.querySelector('#page_5')
     
-    if (adventure_history.history.length <= 4) {
-        page_2.style.display = "none"
-        page_3.style.display = "none"
-        page_4.style.display = "none"
-        page_5.style.display = "none"
-    } else if (adventure_history.history.length <=8) {
-        page_3.style.display = "none"
-        page_4.style.display = "none"
-        page_5.style.display = "none"
-    } else if (adventure_history.history.length <= 12) {
-        page_4.style.display = "none"
-        page_5.style.display = "none"
-    } else if (adventure_history.history.length <= 16) {
-        page_5.style.display = "none"
-    } else {
-
-    };
-
-    console.log(adventure_history)
+    if ('adventure_history' in localStorage) {
+        if (adventure_history.history.length <= 4) {
+            page_2.style.display = "none"
+            page_3.style.display = "none"
+            page_4.style.display = "none"
+            page_5.style.display = "none"
+        } else if (adventure_history.history.length <=8) {
+            page_3.style.display = "none"
+            page_4.style.display = "none"
+            page_5.style.display = "none"
+        } else if (adventure_history.history.length <= 12) {
+            page_4.style.display = "none"
+            page_5.style.display = "none"
+        } else if (adventure_history.history.length <= 16) {
+            page_5.style.display = "none"
+        } else {
+    
+        };
+    } else{}
         
 };
 

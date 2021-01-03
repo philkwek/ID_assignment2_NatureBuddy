@@ -229,7 +229,9 @@
 }
 
 /* history page css */
-
+#pages{
+    text-align:center;
+}
 
 #history_bottom_spacing{
     width: 1rem;
