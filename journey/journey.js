@@ -42,7 +42,7 @@ window.onload = function() { // this function provides the starting location coo
   
 };
 
-function calculateDistance(lat1, lon1, lat2, lon2) {
+function calculateDistance(lat1, lon1, lat2, lon2) { //
   var R = 6371; // km
   var dLat = (lat2 - lat1).toRad();
   var dLon = (lon2 - lon1).toRad(); 
@@ -53,6 +53,8 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
   var d = R * c;
   return d;
 }
+
+
 Number.prototype.toRad = function() {
   return this * Math.PI / 180;
 };

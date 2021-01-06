@@ -30,8 +30,6 @@ function loadAdventure(){ // gets a random number for location and displays rand
 
     console.log(random_location)
 
-
-
     saved_location = {
         "Adventure_Number":adventureNumber,
         "Location": random_location,
@@ -83,6 +81,7 @@ function callback(results, status) {
     var title_location = document.getElementById("name_of_location");
     title_location.innerHTML = fixed_location_name;
 }
+
 function tree_growth(){
     number_of_adventures = JSON.parse(localStorage.getItem("number_of_adventures"));
     number = number_of_adventures.number_of_adventures;

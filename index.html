@@ -30,17 +30,15 @@
   <body>
 
     <div class="container mt-4 m-3 p-3 animate__animated animate__slideInLeft" align=center>
-      <div class = "row align-items-center">
+      <div class = "row align-items-center"> 
+
         <div class = "body_text col-sm-12 mr-5">
           <h1 class="text-left">You've come to the right place!</h1>
         </div>
 
-        <div class = "body_text col-sm-12">
-          <h1 class="text-left">Just tap on the arrow to find your next Adventure Spot!</h1>
-        </div>
-
-        <div class = "body_text col-sm-12" id="tap_history">
-          <a class="text-left" href="/history_page/history_page.html">Tap here to view recent adventures!</a>
+        <div class = "body_text col-sm-12 mt-1">
+          <h1 class="text-left">Just tap on the arrow below to find your next <span id="adventure_spot">
+            Adventure Spot!</span></h1>
         </div>
 
       </div>
@@ -56,7 +54,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script src="script.js"></script>
   </body>
+
+  <footer>
+    <div class="container" id="tap_history">
+      <a href="/history_page/history_page.html">View recent adventures</a>
+    </div>
+  </footer>
   
 </html>

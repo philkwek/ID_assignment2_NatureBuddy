@@ -63,6 +63,10 @@ function callback(results, status) {
       console.log("clicked!");
       window.open("https://www.google.com/maps/search/?api=1&query=" + area_array[adventureNumber][1] + "," + area_array[adventureNumber][2] + "&query_place_id=" + locationId)
     });
+
+    $('#track_adventure').click(function(){
+      window.location= '/journey/journey.html'
+    })
   
 }
 

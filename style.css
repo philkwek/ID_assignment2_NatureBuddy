@@ -1,8 +1,15 @@
 
 /*Landing Page css code*/
 
+.darkmode--activated{
+    color: white;
+}
+
 #tap_history{
-    text-align: left;
+    text-align: center;
+    Bottom: 0;
+    position: fixed;
+    margin-bottom: 6rem;
 }
 
 .head_text h2 {
@@ -16,6 +23,12 @@
     font-size: 2rem;
     margin-right: 1.3rem;
     margin-bottom: 2rem;
+    font-weight: normal;
+}
+
+#adventure_spot{
+    color:#3a8143;
+    font-weight: 600;
 }
 
 .arrow-down{
@@ -23,7 +36,6 @@
     margin: 0 auto;
     text-align:center;
     position: relative;
-    top:11rem;
     color: white;
     display:block;
 }
@@ -109,12 +121,24 @@
 }
 
 #open_maps{
-    width:12rem;
+    width: 12rem;
     height:3rem;
     background-color: white;
     border-radius: 40px;
     color: #707070;
     border-color: #707070;
+    margin-bottom: 1.5rem;
+    font-size:0.8;
+}
+
+#track_adventure{
+    width: 12rem;
+    height:3rem;
+    background-color: #707070;
+    border-radius: 40px;
+    color: white;
+    margin-bottom: 2rem;
+    font-size:0.8;
 }
 
 #open_maps:hover{
