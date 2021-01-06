@@ -1,4 +1,3 @@
-
 const options = {
     bottom: '32px', // default: '32px'
     right: '40px', // default: '32px'
@@ -13,9 +12,12 @@ const options = {
     autoMatchOsTheme: true // default: true
   }
   
-const darkmode = new Darkmode(options);
-darkmode.showWidget();
+const darkmode = new Darkmode();
 
+$('#toggle_darkMode').click(function(){
+    darkmode.toggle()
+    console.log(darkmode.isActivated())
+})
 
 
 

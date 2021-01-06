@@ -34,6 +34,7 @@ Under the summary, users will also see a small tree which will grow for every ti
 * Google Maps API, Routes API and Places API
 * BootStrap 4
 * Animate.css
+* Darkmode.js
 
 
 ## Development Log
