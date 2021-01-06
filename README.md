@@ -103,6 +103,10 @@ Under the summary, users will also see a small tree which will grow for every ti
 ### 3/1/2021
 - Completed View History Page
 
+### 6/1/2021
+- Updated CSS of landing page and updated buttons for confirming location
+- Added experimental code to test feasibility of a Dark Mode toggle for the app
+
 ## Credits
 
 ### Media
