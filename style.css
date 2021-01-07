@@ -5,6 +5,10 @@
     color: white;
 }
 
+.darkmode--activated .head_text h2{
+    color:rgb(180, 180, 180);
+}
+
 #tap_history{
     text-align: center;
     Bottom: 0;
@@ -77,6 +81,20 @@
 
 /*random location css section*/
 
+.darkmode--activated #confirm_location{
+    border-color: white;
+    background-color: black;
+    color: white;
+}
+
+.darkmode--activated #confirm_location:hover{
+    border-color: white;
+    background-color: white;
+    color: black;
+}
+
+
+
 #name_of_location{
     font-size:2rem;
 }
@@ -112,7 +130,33 @@
 }
 
 
+
+
 /*confirmed location css section*/
+.darkmode--activated #open_maps{
+    color:white;
+    background-color:black;
+    border-color: white;
+}
+
+.darkmode--activated #open_maps:hover{
+    background-color:white;
+    color:black;
+}
+
+.darkmode--activated #track_adventure{
+    color:black;
+    background-color:rgb(233, 233, 233);
+    border-color: (233,233,233);
+}
+
+.darkmode--activated #track_adventure:hover{
+    border-radius:40px;
+    color:rgb(233, 233, 233);
+    background-color:black;
+    border-color: black;
+}
+
 
 #bottom_spacing{
     height:11rem;
@@ -141,6 +185,7 @@
 }
 
 #open_maps:hover{
+    border-radius:40px;
     background-color: #707070;
     color: rgb(241, 241, 241);
     border-style: none;
@@ -252,6 +297,20 @@
 }
 
 /* history page css */
+
+.darkmode--activated .history_details{
+    color:rgb(219, 219, 219);
+}
+
+.darkmode--activated .history_details_numbers{
+    color:rgb(219, 219, 219);
+}
+
+.darkmode--activated #return_page{
+    color:rgb(219, 219, 219);
+}
+
+
 #pages{
     text-align:center;
 }
@@ -267,6 +326,7 @@
 
 .history_details_numbers{
     font-size: 1.5rem;
+    font-weight: 500;
     color:rgb(34, 33, 33)
 }
 

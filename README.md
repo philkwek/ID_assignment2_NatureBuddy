@@ -108,6 +108,10 @@ Under the summary, users will also see a small tree which will grow for every ti
 - Updated CSS of landing page and updated buttons for confirming location
 - Added experimental code to test feasibility of a Dark Mode toggle for the app
 
+### 7/1/2021
+- Properly implemented a toggle Dark Mode on landing page
+    - Fixed CSS colors for dark mode for visibility
+
 ## Credits
 
 ### Media
