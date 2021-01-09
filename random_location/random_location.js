@@ -10,16 +10,17 @@ area_array = [["bukit_timah_reserve",1.35291, 103.77836], ["butterfly_insect_kin
 ["bedok_reservoir",1.33996,103.93308],["labrador_reserve",1.26626,103.80320],
 ["changi_beach",1.39129,103.99174],["pasir_ris_park",1.37262,103.95232],
 ["west_coast_park",1.29150,103.76632],["coney_island",1.40941,103.92116],
-["stJohn_island",1.21965,103.84825],["pulau_ubin",1.41112,103.95762]]
+["stJohn_island",1.21965,103.84825],["pulau_ubin",1.41112,103.95762]];
 
 if("number_of_adventures" in localStorage){
 
 } else {
     number_of_adventures = {
         'number_of_adventures': 0,
-    }
+    };
+
     localStorage.setItem("number_of_adventures", JSON.stringify(number_of_adventures))
-}
+};
 
 function loadAdventure(){ // gets a random number for location and displays random location
     area_list = JSON.parse(localStorage.getItem('ListArea_check'));
@@ -28,22 +29,22 @@ function loadAdventure(){ // gets a random number for location and displays rand
 
     random_location = area_array[adventureNumber][0];
 
-    console.log(random_location)
+    console.log(random_location);
 
     saved_location = {
         "Adventure_Number":adventureNumber,
         "Location": random_location,
-    }
+    };
 
-    console.log(saved_location)
+    console.log(saved_location);
 
     localStorage.setItem("saved_location", JSON.stringify(saved_location))
-}
+};
 
 
 document.getElementById('google_search').onclick=function() { // this code enables a clickable link to 
     //find pictures of a location
-    window.open('http://images.google.com/search?q='+random_location + " singapore");
+    window.open('http://images.google.com/search?q='+random_location + " singapore")
 };
 
 let map;
@@ -59,7 +60,7 @@ function initMap() { // this functions runs the map api
         location: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
         query: random_location,
     };
-    console.log(request)
+    console.log(request);
 
     var service = new google.maps.places.PlacesService(map);
     service.textSearch(request, callback);
@@ -80,26 +81,26 @@ function callback(results, status) {
     fixed_location_name = results[0].name;
     var title_location = document.getElementById("name_of_location");
     title_location.innerHTML = fixed_location_name;
-}
+};
 
 function tree_growth(){
     number_of_adventures = JSON.parse(localStorage.getItem("number_of_adventures"));
     number = number_of_adventures.number_of_adventures;
     number = number + 1;
-    console.log(number)
+    console.log(number);
 
     number_of_adventures = {
         'number_of_adventures': number,
-    }
+    };
 
-    localStorage.setItem("number_of_adventures", JSON.stringify(number_of_adventures))
-}
+    localStorage.setItem("number_of_adventures", JSON.stringify(number_of_adventures));
+};
 
 $('#confirm_location').click(function(){ //event listener for button
-    tree_growth(),
+    tree_growth();
     
     console.log("clicked!");
-    location.href = "/confirmed_location/confirmed_location.html"
+    location.href = "/confirmed_location/confirmed_location.html";
 });
 
-loadAdventure()
+loadAdventure();

@@ -10,14 +10,14 @@ const options = {
     saveInCookies: false, // default: true,
     label: '🌓', // default: ''
     autoMatchOsTheme: true // default: true
-  }
+  };
   
 const darkmode = new Darkmode();
 
 $('#toggle_darkMode').click(function(){
     darkmode.toggle()
     console.log(darkmode.isActivated())
-})
+});
 
 
 
