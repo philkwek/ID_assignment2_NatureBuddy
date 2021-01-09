@@ -112,6 +112,9 @@ Under the summary, users will also see a small tree which will grow for every ti
 - Properly implemented a toggle Dark Mode on landing page
     - Fixed CSS colors for dark mode for visibility
 
+### 9/1/2021
+-   Cleaned up HTML code after running it through W3C checker
+
 ## Credits
 
 ### Media
