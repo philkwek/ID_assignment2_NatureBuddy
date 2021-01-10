@@ -53,6 +53,7 @@ in the randomizer
 * BootStrap 4
 * Animate.css
 * Darkmode.js
+* GitHub & GitHub Pages
 
 
 ## Development Log
