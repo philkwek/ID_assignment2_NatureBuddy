@@ -171,7 +171,7 @@
 }
 
 #open_maps{
-    width: 12rem;
+    width: 16rem;
     height:3rem;
     background-color: white;
     border-radius: 40px;
@@ -182,7 +182,7 @@
 }
 
 #track_adventure{
-    width: 12rem;
+    width: 16rem;
     height:3rem;
     background-color: #707070;
     border-radius: 40px;
