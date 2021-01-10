@@ -1,6 +1,10 @@
 
 /*Landing Page css code*/
 
+#toggle_darkMode{
+    font-style: italic;
+}
+
 .darkmode--activated{
     color: white;
 }
