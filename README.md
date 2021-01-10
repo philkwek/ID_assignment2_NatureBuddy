@@ -136,6 +136,7 @@ in the randomizer
 ### 10/1/2021
 - Updated Readme
 - Updated CSS Elements of Journey.html and Index.html
+- Updated positioning of Elements on Confirmed_location 
 
 ## Credits
 
