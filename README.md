@@ -10,9 +10,11 @@ The app will provide a suggestion by grabbing from a list of Parks, Nature Reser
 
 Under the summary, users will also see a small tree which will grow for every time that they go on a adventure, providing users with a sense of progress/achievement. The app will also award badges for more significant achievements such as "Taken 3 Adventures!" or "Walked a total of 10km".
 
-## Wireframes can be seen here -> [Click me!](https://xd.adobe.com/view/88c7ac2b-d3c7-4040-8cc6-20edea67d832-dd94/grid)
+## Wireframes can be seen here -> [Click me!](https://xd.adobe.com/view/25f0d503-b976-4674-a2b6-ddfd50459d92-70a3/?fullscreen#access_token=eyJ4NXUiOiJpbXNfbmExLWtleS0xLmNlciIsImFsZyI6IlJTMjU2In0.eyJpZCI6IjE2MTAyNDQ5MDE5NThfNDEzY2IzYzQtMTUwYy00OTA2LTgyZWMtNWJjZjZjN2E4YjgxX3NncDUiLCJjbGllbnRfaWQiOiJDb21ldFdlYjEiLCJ1c2VyX2lkIjoiQjBDNDc3NTM1RTlBNjc4NDBBNDk1RTdEQEFkb2JlSUQiLCJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwiYXMiOiJpbXMtbmExIiwiZmciOiJWREFJTkNFQlZMRzVaUFdHQzZBM1JIUUFZRT09PT09PSIsInNpZCI6IjE2MDk5MTE1MzY3NzdfODIwNzgxYjYtNTE5My00OWFjLTk1YzQtYzk0MzhmNDI1NmJjX3NncDUiLCJtb2kiOiJkMDliNDdmNiIsImV4cGlyZXNfaW4iOiI4NjQwMDAwMCIsInNjb3BlIjoiIiwiY3JlYXRlZF9hdCI6IjE2MTAyNDQ5MDE5NTgifQ.kkFYqW6msLxYyymuIOybP6z7ZMmSJtbAHkqGNY9iGMQPu6SqVh_0pF6nuayOa9qdg-fALIqnJRr4iqZRiSy6oWJyjkC9rmdamh-_AWz8siyyWdrASaswUan2qlsooE2XI8sDZmqy4IAZWW8B2v-_okCzqouv25d4aw1f1zwxtX_1lPttYAHScK0ShEIE9qsh_7FTdBVJZQQWvuPXs8uSo2-7lrAsUMZGALfxnPPoZoBzHizN232vl-pFXlz7Jns3JBWoLlSut5a1JjF9zfzBL7AjVLjjRKdTj6tLoPxbNm6RZ8uvAUy03V9uFpNJxj4hPvTeso2L9VKDm_K-NcAn7g&token_type=bearer&expires_in=86399987)
 
-## Planned Features
+## Features
+
+### Originally Planned Features
 * Achievements (Get a Badge for X number of Adventures)
 * Grow a Tree! (Tree grows for every Adventure taken)
 * Track Adventure on the Map (API)
@@ -21,11 +23,27 @@ Under the summary, users will also see a small tree which will grow for every ti
 * Display said Location on Map (API)
 * Display Trip Summary after ending Adventure (Time taken and Distance travelled)
 
-## Extra Features (To be Implemented if Time Persist)
+### Extra Originally Planned Features (To be Implemented if Time Persist)
 * Show History of Adventures + Details
 * Set up a simple Profile
 * Give Directions/Routes to Said Location directly from the App
 
+### Implemented Features
+* Grow a Tree!
+* Tracking Adventure on the Map (Track time spent and distance travelled)
+* Live Location Tracking
+* Directions to Location (via Google Maps app link)
+* Location Randomizer
+* Dark Mode Toggle
+* History Page (displays visited location and stats)
+
+### Future Planned Features
+* Achievements (Badges etc)
+* Build in Route finder to get to Location
+* Ability to take photos of Location and share to a Database, pictures viewable by those who view the location
+in the randomizer
+* Create a Profile
+* Levelling System 
 
 ## Technologies used
 * Adobe XD
@@ -114,6 +132,10 @@ Under the summary, users will also see a small tree which will grow for every ti
 
 ### 9/1/2021
 -   Cleaned up HTML code after running it through W3C checker
+
+### 10/1/2021
+- Updated Readme
+- Updated CSS Elements of Journey.html and Index.html
 
 ## Credits
 

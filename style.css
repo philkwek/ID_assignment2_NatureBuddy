@@ -15,6 +15,10 @@
     margin-bottom: 6rem;
 }
 
+#tap_history a{
+    color: #707070;
+}
+
 .head_text h2 {
     font-size: 1.5rem;
     font-style: italic;
@@ -157,6 +161,9 @@
     border-color: black;
 }
 
+#confirmed{
+    color:rgb(245, 159, 0);
+}
 
 #bottom_spacing{
     height:11rem;
@@ -249,6 +256,11 @@
 
 #distance{
     font-size:2rem;
+}
+
+#map_journey{
+    width:95%;
+    height:21rem;
 }
 
 .arrow-down-journey{

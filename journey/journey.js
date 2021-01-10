@@ -66,7 +66,7 @@ function getLocation (){
   previous_location = JSON.parse(localStorage.getItem('previous_location')) //previous position
 
   navigator.geolocation.getCurrentPosition(function(position){ //current position
-    map = new google.maps.Map(document.getElementById("map"), {
+    map = new google.maps.Map(document.getElementById("map_journey"), {
       center: { lat: position.coords.latitude, lng: position.coords.longitude },
       zoom:17,
       mapId:'6ef0b532fe532f6',
@@ -111,7 +111,7 @@ function getLocation (){
 function initMap() { // this functions runs the map api
 
 
-  map = new google.maps.Map(document.getElementById("map"), {
+  map = new google.maps.Map(document.getElementById("map_journey"), {
     center: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
     zoom:17,
     mapId:'6ef0b532fe532f6',
