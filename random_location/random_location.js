@@ -49,7 +49,7 @@ document.getElementById('google_search').onclick=function() { // this code enabl
 
 let map;
 
-function initMap() { // this functions runs the map api
+function initMap() { // this functions runs the map api, Main code was taken from Google Maps API, but was edited for my use case
     lon = area_array[adventureNumber]
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
@@ -83,7 +83,7 @@ function callback(results, status) {
     title_location.innerHTML = fixed_location_name;
 };
 
-function tree_growth(){
+function tree_growth(){ //function stores number of adventures taken
     number_of_adventures = JSON.parse(localStorage.getItem("number_of_adventures"));
     number = number_of_adventures.number_of_adventures;
     number = number + 1;

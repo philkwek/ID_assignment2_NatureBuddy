@@ -108,7 +108,7 @@ function getLocation (){
       
 };
 
-function initMap() { // this functions runs the map api
+function initMap() { // this functions runs the map api, main code was taken from Google Maps API documentation, but was edited to fit for my use
 
 
   map = new google.maps.Map(document.getElementById("map_journey"), {

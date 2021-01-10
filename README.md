@@ -138,9 +138,22 @@ in the randomizer
 - Updated Readme
 - Updated CSS Elements of Journey.html and Index.html
 - Updated positioning of Elements on Confirmed_location 
+- Updated documentation for Javascript Code
 
 ## Credits
 
 ### Media
+- All media used in this app was created by me
 
 ### Acknowledgements
+
+
+### APIs and External JS Used
+- Google Maps API
+    - Maps API
+    - Places API
+- Animate.css (for animations)
+- Darkmode.JS (for darkmode toggle)
+
+
+

@@ -17,7 +17,7 @@ var time_taken;
 var distance_travelled;
 var saved_location;
 
-function enter_saved_data(){
+function enter_saved_data(){ //function enters data from journey into the trip summary and also saves data in localstorage for the History page
 
     if("adventure_history" in localStorage){
 
@@ -144,7 +144,7 @@ function callback(results, status) {
 
 console.log(number_of_adventures)
 
-function addImage() {
+function addImage() { //function adds appropirate image of tree depending on the number of adventures taken
 
     console.log('image_running')
 

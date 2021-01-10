@@ -23,7 +23,7 @@ function plz(digit){
     return zpad;
 };
 
-function loadHistory(){
+function loadHistory(){ // function loads first 4 adventures taken and displays it on the Page
 
     let history_group_1 = document.querySelector('#history_group_1')
     history_group_1.style.display = "block"
@@ -126,7 +126,7 @@ function loadHistory(){
         
 };
 
-function loadHistory_2(){
+function loadHistory_2(){ //same as loadHistory(), except this runs for page 2 of the History
 
     let history_group_1 = document.querySelector('#history_group_1')
     history_group_1.style.display = "none"
@@ -226,7 +226,7 @@ function loadHistory_2(){
         
 };
 
-function loadHistory_3(){
+function loadHistory_3(){ //same as loadHistory(), except this runs for page 3 of the History
 
     let history_group_1 = document.querySelector('#history_group_1')
     history_group_1.style.display = "none"
@@ -326,7 +326,7 @@ function loadHistory_3(){
         
 };
 
-function loadHistory_4(){
+function loadHistory_4(){ //same as loadHistory(), except this runs for page 4 of the History
 
     let history_group_1 = document.querySelector('#history_group_1')
     history_group_1.style.display = "none"
@@ -425,108 +425,9 @@ function loadHistory_4(){
     console.log(adventure_history)
         
 };
+ 
 
-function loadHistory_3(){
-
-    let history_group_1 = document.querySelector('#history_group_1')
-    history_group_1.style.display = "none"
-
-    let history_group_2 = document.querySelector('#history_group_2')
-    history_group_2.style.display = "none"
-
-    let history_group_3 = document.querySelector('#history_group_3')
-    history_group_3.style.display = "none"
-
-    let history_group_4 = document.querySelector('#history_group_4')
-    history_group_4.style.display = "none"
-
-    if ('adventure_history' in localStorage){
-        adventure_history = JSON.parse(localStorage.getItem('adventure_history'))
-        
-
-        if (adventure_history.history.length > 12) {
-            var loop_length = 4
-        } else {
-            var loop_length = adventure_history.history.length
-        }
-
-        
-        for (i = 0; i<loop_length; i++) {
-
-            array_number = i + 8
-
-            if (adventure_history.history[array_number] == null){
-                break
-            } else {}
-
-            console.log('loop!')
-
-            history_number = i + 1
-
-            var history_group = '#history_group_' + history_number
-            let group = document.querySelector(history_group)
-            group.style.display = "block"
-            
-            
-            location_name = adventure_history.history[array_number].location_name
-            var name_id = 'location_name_' + history_number
-            document.getElementById(name_id).innerHTML = location_name
-
-
-            date = adventure_history.history[array_number].date
-            var date_id = 'date_' + history_number
-            document.getElementById(date_id).innerHTML = date
-
-            distance_travelled = adventure_history.history[array_number].distance_travelled
-            var distance_id = 'distance_travelled_' + history_number
-            document.getElementById(distance_id).innerHTML = distance_travelled
-
-
-            duration = adventure_history.history[array_number].duration
-            var duration_id = 'duration_' + history_number
-            var hour = duration.hour;
-            var mins = duration.minute;
-            var secs = duration.seconds;
-            time = hour +":" + plz(mins) + ":" + plz(secs)
-            document.getElementById(duration_id).innerHTML = time
-        }
-    } else {
-        document.getElementById('no_history').innerHTML = 'No recent history!'
-
-        let page_div = document.querySelector('#history_list')
-        page_div.style.display = "none"
-
-    }
-
-
-    let page_2 = document.querySelector('#page_2')
-    let page_3 = document.querySelector('#page_3')
-    let page_4 = document.querySelector('#page_4')
-    let page_5 = document.querySelector('#page_5')
-    
-    if (adventure_history.history.length <= 4) {
-        page_2.style.display = "none"
-        page_3.style.display = "none"
-        page_4.style.display = "none"
-        page_5.style.display = "none"
-    } else if (adventure_history.history.length <=8) {
-        page_3.style.display = "none"
-        page_4.style.display = "none"
-        page_5.style.display = "none"
-    } else if (adventure_history.history.length <= 12) {
-        page_4.style.display = "none"
-        page_5.style.display = "none"
-    } else if (adventure_history.history.length <= 16) {
-        page_5.style.display = "none"
-    } else {
-
-    };
-
-    console.log(adventure_history)
-        
-};
-
-function loadHistory_5(){
+function loadHistory_5(){ //same as loadHistory(), except this runs for page 5 of the History
 
     let history_group_1 = document.querySelector('#history_group_1')
     history_group_1.style.display = "none"

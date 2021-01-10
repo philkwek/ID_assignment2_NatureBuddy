@@ -21,7 +21,7 @@ adventureNumber = get_item_parsed.Adventure_Number;
 random_location = get_item_parsed.Location;
 
 
-function initMap() { // this functions runs the map api
+function initMap() { // this functions runs the map api, Main code was taken from Google Maps API documentation but was edited for this use case
     lon = area_array[adventureNumber]
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: area_array[adventureNumber][1], lng: area_array[adventureNumber][2] },
