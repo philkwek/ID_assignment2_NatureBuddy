@@ -23,7 +23,7 @@ Under the summary, users will also see a small tree which will grow for every ti
 * Display said Location on Map (API)
 * Display Trip Summary after ending Adventure (Time taken and Distance travelled)
 
-### Extra Originally Planned Features (To be Implemented if Time Persist)
+### Extra Originally Planned Features (
 * Show History of Adventures + Details
 * Set up a simple Profile
 * Give Directions/Routes to Said Location directly from the App
