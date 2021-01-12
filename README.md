@@ -2,7 +2,7 @@
 
 #### Hi! My name's Phil and this github repo will be where I'll be storing my HTML, CSS and Javascript code for my Nature Buddy App!
 
-## Github pages link to website click here -> [philkwek.github.io](philkwek.github.io)
+## Github pages link to website click here -> [philkwek.github.io](https://philkwek.github.io/)
 
 ## What is Nature Buddy?
 
