@@ -2,6 +2,8 @@
 
 #### Hi! My name's Phil and this github repo will be where I'll be storing my HTML, CSS and Javascript code for my Nature Buddy App!
 
+## Github pages link to website click here -> [philkwek.github.io](philkwek.github.io)
+
 ## What is Nature Buddy?
 
 This app is for people who want to explore Singapore's Nature and has no idea where to start. 
